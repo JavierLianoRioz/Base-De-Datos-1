@@ -16,7 +16,6 @@ Ejemplo de modelo ER simple
    |                           |
  nombre                        precio
  dirección                     stock
-
-![1757671909835](images/03_modelo_er_simple/1757671909835.png)
 ```
 
+![1757671909835](images/03_modelo_er_simple/1757671909835.png)

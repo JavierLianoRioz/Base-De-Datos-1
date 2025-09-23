@@ -1,0 +1,21 @@
+# Identificación de Entidades
+
+- Usuario (Superclase)
+- Cliente (Subclase)
+- Vendedor (Subclase)
+- Producto
+- Variante de Producto
+- Categoría
+- Inventario
+- Almacén
+- Pedido
+- Línea de Pedido
+- Envío (*Shipment*)
+- Pago
+- Método de Pago
+- Devolución
+- Nota de Crédito
+- Promoción/Cupón
+- Reseña/Valoración
+- Historial de Precios
+- Log de Auditoría

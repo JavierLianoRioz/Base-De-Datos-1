@@ -1,0 +1,21 @@
+# Atributos
+
+ - Usuario: id_usuario, email, contraseña, fecha_registro
+ - Cliente: (hereda de Usuario)
+ - Vendedor: reputacion (hereda de Usuario)
+ - Producto: id_producto, nombre, descripcion
+ - Variante de Producto: id_variante, talla, color, precio_actual
+ - Categoría: id_categoria, nombre, descripcion
+ - Inventario: id_inventario, cantidad_stock
+ - Almacén: id_almacen, nombre, ubicacion
+ - Pedido: id_pedido, fecha_creacion, estado, direccion_envio
+ - Línea de Pedido: id_linea, cantidad, precio_unitario
+ - Envío: id_envio, fecha_envio, estado_envio, empresa_transporte
+ - Pago: id_pago, monto, fecha_pago, estado_pago
+ - Método de Pago: id_metodo, nombre (ej: tarjeta, PayPal)
+ - Devolución: id_devolucion, motivo, estado_devolucion, fecha_devolucion
+ - Nota de Crédito: id_nota, monto, fecha_emision
+ - Promoción/Cupón: id_promocion, codigo, descripcion, fecha_validez_inicio, fecha_validez_fin, condiciones
+ - Reseña/Valoración: id_reseña, calificacion, comentario, fecha_reseña
+ - Historial de Precios: id_historial, precio_anterior, fecha_cambio
+ - Log de Auditoría: id_log, fecha_hora, usuario, accion, entidad_afectada

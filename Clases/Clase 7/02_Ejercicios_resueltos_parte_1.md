@@ -5,6 +5,7 @@
 Obtener los nombres y departamentos de los empleados con salario > 2000.
 
 R1 := σ{salario > 2000}(EMPLEADO)
+
 R2 := π{nombre, depto}(R1)
 
 **Cálculo intermedio y resultado:**
@@ -34,7 +35,9 @@ R2 = π_{nombre, depto}(R1)
 Mostrar nombre y ciudad de los clientes menores de 30 años, renombrando el resultado como JOVENES.
 
 R1 := σ{edad < 30}(CLIENTE)
+
 R2 := π{nombre, ciudad}(R1)
+
 JOVENES := ρ{JOVENES(nombre, ciudad)}(R2)
 
 **Cálculo intermedio y resultado:**
@@ -66,7 +69,9 @@ JOVENES (renombrada) = resultado final (misma tabla, nombre de relación JOVENES
 Mostrar los nombres de los empleados junto al nombre del departamento donde trabajan.
 
 R1 := EMPLEADO × DEPARTAMENTO
+
 R2 := σ{EMPLEADO.id_depto = DEPARTAMENTO.id_depto}(R1)
+
 R3 := π{EMPLEADO.nombre, DEPARTAMENTO.nombre_depto}(R2)
 
 **Cálculo intermedio y resultado:**
@@ -120,9 +125,11 @@ CLIENTES_B
 **Tareas y pasos:**
 
 (1) Todos los clientes de A o B:
+
 R1 := CLIENTES_A ∪ CLIENTES_B
 
 (2) Clientes que solo pertenecen a A (A − B):
+
 R2 := CLIENTES_A − CLIENTES_B
 
 **Resultados:**
@@ -151,10 +158,15 @@ R2 = CLIENTES_A − CLIENTES_B
 Mostrar los nombres de los clientes que compraron productos con precio > 100.
 
 R1 := DETALLE_PEDIDO ⨝_{DETALLE_PEDIDO.id_producto = PRODUCTO.id_producto} PRODUCTO
+
 R2 := σ{PRODUCTO.precio > 100}(R1)
+
 R3 := π{id_pedido}(R2)
+
 R4 := R3 ⨝{R3.id_pedido = PEDIDO.id_pedido} PEDIDO
+
 R5 := R4 ⨝{R4.id_cliente = CLIENTE.id_cliente} CLIENTE
+
 Resultado := π{CLIENTE.nombre, PEDIDO.id_pedido}(R5)
 
 R1 = DETALLE_PEDIDO ⨝ PRODUCTO (añadimos precios)
